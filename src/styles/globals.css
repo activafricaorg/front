@@ -43,6 +43,11 @@ a {
 	text-decoration: none;
 }
 
+header {
+	position: fixed;
+    width: 100%;
+}
+
 .container {
 	box-sizing: content-box;
 	margin: 0 auto;
@@ -68,7 +73,7 @@ a {
 .main {
 	display: flex;
 	padding: var(--v-spacing) 0;
-	height: calc(100vh - 80px);
+	height: 100vh;
 	max-width: var(--max-width);
 	margin: 0 auto;
 	align-items: center;
