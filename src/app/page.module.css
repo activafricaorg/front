@@ -12,7 +12,7 @@
 	margin: 0 0 40px;
 	font-size: 3.6em;
 	font-family: var(--font-sans), Arial, Helvetica, sans-serif;
-	letter-spacing: -2.15px;
+	letter-spacing: -1.15px;
 	line-height: 110%;
 	font-weight: 700;
 }
@@ -20,7 +20,7 @@
 .page p {
 	font-size: 1.35em;
 	line-height: 1.3em;
-	letter-spacing: -.031em;
+	letter-spacing: -.015em;
 	font-family: var(--font-sans-serif), Arial, Helvetica, sans-serif;
 	opacity: 0.9;
 }
