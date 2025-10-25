@@ -14,7 +14,7 @@
 	font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 	letter-spacing: -2.15px;
 	line-height: 110%;
-	/* font-weight: 700; */
+	font-weight: 700;
 }
 
 .page p {
