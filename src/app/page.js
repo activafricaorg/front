@@ -64,9 +64,9 @@ export default function Home() {
 			<div className="container">
 				<div className="main">
 				<div className="cta">
-					<h1>Uncover Media Insights Across Africa's Digital Landscape</h1>
+					<h1>Uncover Media Insights Across Africa&apos;s Digital Landscape</h1>
 					<div className="cta-content">
-					<p>AI-powered platform that monitors Africa's news and media conversations, helping brands, agencies, and media houses protect reputation, capture opportunities, and uncover blind spots.</p>
+					<p>AI-powered platform that monitors Africa&apos;s news and media conversations, helping brands, agencies, and media houses protect reputation, capture opportunities, and uncover blind spots.</p>
 					<Waitlist />
 					</div>
 				</div>
