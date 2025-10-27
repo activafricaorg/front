@@ -4,10 +4,10 @@ import Header from "@/component/layout/header";
 
 export const metadata = {
 	metadataBase: 'https://activ.africa',
-	title: "Activ | Media Intelligence for Africa",
+	title: "Activ Media Intelligence",
 	description: "Uncover Media Insights Across Africa's Digital Landscape",
 	openGraph: {
-		title: "Activ | Media Intelligence for Africa",
+		title: "Activ Media Intelligence",
 		description: "Uncover Media Insights Across Africa's Digital Landscape",
 		url: "https://activ.africa",
 		siteName: "Activ Media Intelligence",
@@ -19,7 +19,7 @@ export const metadata = {
 	},
 	twitter: {
 		card: "summary_large_image",
-		title: "Activ | Media Intelligence for Africa",
+		title: "Activ Media Intelligence",
 		description: "Uncover Media Insights Across Africa's Digital Landscape",
 		images: ["/images/og.png"],
 	},
