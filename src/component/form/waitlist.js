@@ -60,7 +60,7 @@ const Waitlist = ({ open = false, onClose }) => {
       <div className="modal-wrapper" onClick={(e) => e.stopPropagation()}>
         <form onSubmit={onSubmit} className="waitlist-form">
           <h2>Join the waitlist</h2>
-          <p>Get early access to Activ and unlock a new way of understanding how your brand shows up across Africa's digital and media landscape.</p>
+          <p>Get early access to Activ and unlock a new way of understanding how your brand shows up across Africa&apos;s digital and media landscape.</p>
           <div className="waitlist-form-wrapper">
             <input
               type="email"
