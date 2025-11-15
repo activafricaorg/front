@@ -23,6 +23,7 @@
 	letter-spacing: -.015em;
 	font-family: var(--font-sans-serif), Arial, Helvetica, sans-serif;
 	opacity: 0.9;
+	margin-bottom: 30px;
 }
 
 .backgroundContainer {

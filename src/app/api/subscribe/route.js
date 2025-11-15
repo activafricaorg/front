@@ -43,8 +43,16 @@ export async function POST(req) {
     }
 
     const email = (body?.email || '').trim()
+    const jobTitle = (body?.jobTitle || '').trim()
+    const organization = (body?.organization || '').trim()
+    const country = (body?.country || '').trim()
+
     if (!isValidEmail(email)) {
       return NextResponse.json({ error: 'Invalid email address' }, { status: 400, headers })
+    }
+
+    if (!jobTitle || !organization || !country) {
+      return NextResponse.json({ error: 'All fields are required' }, { status: 400, headers })
     }
 
     const existing = await notion.dataSources.query({
@@ -65,6 +73,9 @@ export async function POST(req) {
       parent: { database_id: DATABASE_ID },
       properties: {
         [TITLE_PROP]: { title: [{ text: { content: email } }] },
+        'Job Title': { rich_text: [{ text: { content: jobTitle } }] },
+        'Organization': { rich_text: [{ text: { content: organization } }] },
+        'Country': { rich_text: [{ text: { content: country } }] },
       },
     })
 

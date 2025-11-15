@@ -1,5 +1,6 @@
 :root {
 	--background: #ffffff;
+	--modal-background: #F3F3F3;
 	--foreground: #1e2225;
 	--max-width: 1728px;
 	--h-spacing: 1.6666666667rem;
@@ -90,19 +91,44 @@ header {
 	padding-left: 80px;
 }
 
+.cta-content .action-item {
+	display: flex;
+	justify-content: end;
+}
+
+.cta-content .form-button {
+	width: max-content;
+}
+
 .waitlist-form {
-	margin-top: 40px;
-	max-width: 600px;
+	max-width: 460px;
+    margin-top: 40px;
+    width: 100%;
+}
+
+.waitlist-form h2 {
+	font-family: var(--font-sans), Arial, Helvetica, sans-serif;
+	letter-spacing: -1px;
+    margin: 0 0 20px;
+	font-size: 2.4em;
+    font-weight: 700;
+    line-height: 110%;
+}
+
+.waitlist-form p {
+	margin-bottom: 30px;
 }
 
 .waitlist-form-wrapper {
 	display: flex;
+	flex-direction: column;
 	grid-gap: 20px;
 }
 
-.waitlist-form input {
+.waitlist-form input,
+.waitlist-form select {
 	flex: 1;
-	padding: 15px 30px;
+	padding: 15px 25px;
 	font-size: 1.3em;
 	font-family: var(--font-sans-serif), Arial, Helvetica, sans-serif;
 	border: 1px solid rgb(0 0 0 / 25%);
@@ -116,8 +142,36 @@ header {
 	letter-spacing: -.031em;
 }
 
-.waitlist-form input:focus {
+.waitlist-form input:focus,
+.waitlist-form select:focus {
 	border-color: rgb(0 0 0 / 50%);
+}
+
+.waitlist-form select {
+	padding: 15px 25px 15px 24px;
+	color: rgb(158, 158, 158);
+	appearance: none;
+	background: url(data:image/svg+xml;base64,PHN2ZyBpZD0iTGF5ZXJfMSIgZGF0YS1uYW1lPSJMYXllciAxIiB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCA0Ljk1IDEwIj48ZGVmcz48c3R5bGU+LmNscy0xe2ZpbGw6I2ZmZjt9LmNscy0ye2ZpbGw6IzQ0NDt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmFycm93czwvdGl0bGU+PHJlY3QgY2xhc3M9ImNscy0xIiB3aWR0aD0iNC45NSIgaGVpZ2h0PSIxMCIvPjxwb2x5Z29uIGNsYXNzPSJjbHMtMiIgcG9pbnRzPSIxLjQxIDQuNjcgMi40OCAzLjE4IDMuNTQgNC42NyAxLjQxIDQuNjciLz48cG9seWdvbiBjbGFzcz0iY2xzLTIiIHBvaW50cz0iMy41NCA1LjMzIDIuNDggNi44MiAxLjQxIDUuMzMgMy41NCA1LjMzIi8+PC9zdmc+) no-repeat 98% 50%;
+}
+
+.waitlist-form select.active {
+	color: var(--foreground);
+}
+
+/* .waitlist-form option {
+	color: rgb(158, 158, 158);
+	
+} */
+
+/* .waitlist-form option:first-of-type {
+	color: rgb(158, 158, 158);
+} */
+
+.form-more {
+	margin-top: 30px;
+	font-size: 1.05em;
+	line-height: 1.4em;
+	color: #828280;
 }
 
 .form-button {
@@ -128,14 +182,12 @@ header {
 	cursor: pointer;
 	font-family: var(--font-sans-serif), Arial, Helvetica, sans-serif;
 	padding: 15px 30px;
-    transition: background .3s;
 	border-radius: 1rem;
 	display: flex;
     align-items: center;
 	line-height: 1;
 	vertical-align: middle;
 	letter-spacing: -.031em;
-	min-width: 225px;
 	justify-content: center;
 }
 
@@ -190,6 +242,62 @@ header .form-button svg {
 	border-radius: 1rem;
 }
 
+.modal {
+	background-color: var(--background);
+    bottom: 0;
+    left: 50%;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    transform: translate(100%);
+    transition-delay: 0s;
+    z-index: 1001;
+}
+
+.modal.active {
+	pointer-events: all;
+    transform: translate(0);
+}
+
+.modal-close {
+	align-items: center;
+    border: 0;
+    color: var(--text-color);
+	background-color: #dbdbdb;;
+    cursor: pointer;
+    display: flex;
+    height: 2.2222222222rem;
+    justify-content: center;
+    width: 2.2222222222rem;
+}
+
+.modal-tint {
+	background-color: #241e1ecc;
+    bottom: 0;
+    left: 0;
+    opacity: 0;
+    pointer-events: none;
+    position: fixed;
+    right: 0;
+    top: 0;
+    z-index: 1000;
+}
+
+.modal-tint.active {
+	opacity: 1;
+    pointer-events: all;
+}
+
+.modal-wrapper {
+	display: flex;
+    gap: 2rem;
+    height: 100%;
+    justify-content: center;
+    transition: transform .6s cubic-bezier(.85, 0, .15, 1);
+    width: 100%;
+}
+
 @media (prefers-color-scheme: dark) {
 	html {
 		color-scheme: dark;
@@ -225,5 +333,10 @@ header .form-button svg {
 	.form-button {
 		min-width: unset;
 		padding: 15px 20px;
+	}
+
+	.modal {
+		left: 0;
+		padding: 20px;
 	}
 }

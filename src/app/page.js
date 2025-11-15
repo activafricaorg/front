@@ -2,9 +2,10 @@
 
 import styles from "./page.module.css";
 import Waitlist from "@/component/form/waitlist";
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 
 export default function Home() {
+	const [isWaitlistOpen, setIsWaitlistOpen] = useState(false);
 	useEffect(() => {
 		const v = document.getElementById('bgvid');
 		if (!v) return;
@@ -66,8 +67,15 @@ export default function Home() {
 				<div className="cta">
 					<h1>Uncover Media Insights Across Africa&apos;s Digital Landscape</h1>
 					<div className="cta-content">
-					<p>AI-powered platform that monitors Africa&apos;s news and media conversations, helping brands, agencies, and media houses protect reputation, capture opportunities, and uncover blind spots.</p>
-					<Waitlist />
+						<p>AI-powered platform that monitors Africa&apos;s news and media conversations, helping brands, agencies, and media houses protect reputation, capture opportunities, and uncover blind spots.</p>
+						<div className="action-item">
+							<button onClick={() => setIsWaitlistOpen(true)} className="form-button">
+								Join our waitlist
+								<svg xmlns="http://www.w3.org/2000/svg" width="100%" viewBox="0 0 16 17" fill="none" className="button-arrow"><path d="M0.5 8.5H15.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path><path d="M10.5 3.5L15.5 8.5L10.5 13.5" stroke="currentColor" strokeLinecap="round" strokeLinejoin="round"></path></svg>
+							</button>
+						</div>
+						<Waitlist open={isWaitlistOpen} onClose={() => setIsWaitlistOpen(false)} />
+						<div className={`modal-tint ${isWaitlistOpen ? 'active' : ''}`} onClick={() => setIsWaitlistOpen(false)}></div>
 					</div>
 				</div>
 				</div>
