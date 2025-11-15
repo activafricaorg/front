@@ -78,7 +78,7 @@ const Waitlist = ({ open = false, onClose }) => {
               required
               autoComplete="organization-title"
               className="form-input"
-              placeholder="Job Title"
+              placeholder="Job title"
             />
             <input
               type="text"
