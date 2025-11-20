@@ -11,7 +11,7 @@ export default function CookiePolicy() {
                     <div className="page-wrapper">
                         <h1>Cookie Policy</h1>
                         <div className="page-content">
-                            <p>This Cookie Policy explains how Activ ("Company," "we," "us," and "our") uses cookies and similar technologies to recognize you when you visit our website at http://activ.africa ("Website"). It explains what these technologies are and why we use them, as well as your rights to control our use of them.</p>
+                            <p>This Cookie Policy explains how Activ (&quot;Company,&quot; &quot;we,&quot; &quot;us,&quot; and &quot;our&quot;) uses cookies and similar technologies to recognize you when you visit our website at http://activ.africa (&quot;Website&quot;). It explains what these technologies are and why we use them, as well as your rights to control our use of them.</p>
 							<p>In some cases we may use cookies to collect personal information, or that becomes personal information if we combine it with other information.</p>
 							<h2>What are cookies?</h2>
 							<p>Cookies are small data files placed on your computer or mobile device when you visit a website. They are widely used by website owners to ensure their sites function properly, operate more efficiently, and provide useful reporting information.</p>

@@ -10,10 +10,10 @@ export default function PrivacyPolicy() {
                     <div className="page-wrapper">
                         <h1>Privacy Policy</h1>
                         <div className="page-content">
-                            <p>This Privacy Notice for Activ (“Activ,” “we,” “us,” or “our”) describes how and why we may access, collect, store, use, and/or share (“process”) your personal information when you use our services (“Services”), including when you:</p>
+                            <p>This Privacy Notice for Activ (&quot;Activ,&quot; &quot;we,&quot; &quot;us,&quot; or &quot;our&quot;) describes how and why we may access, collect, store, use, and/or share (&quot;process&quot;) your personal information when you use our services (&quot;Services&quot;), including when you:</p>
 							<ul className={styles.anchorLinks}>
 								<li>Visit our website at [https://www.activ.africa], or any other website of ours that links to this Privacy Notice</li>
-                                <li>Use our products, dashboards, or tools (for example, Activ's news, media, and insights platform)</li>
+                                <li>Use our products, dashboards, or tools (for example, Activ&apos;s news, media, and insights platform)</li>
                                 <li>Engage with us in other related ways, including any sales, marketing, customer success, or events</li>
 							</ul>
 							<p>If you have any questions or concerns after reading this Privacy Notice, you can contact us at [privacy@activ.africa].</p>
@@ -23,7 +23,7 @@ export default function PrivacyPolicy() {
 							<h3>What personal information do we process?</h3>
                             <p>When you visit, use, or navigate our Services, we may process personal information depending on how you interact with Activ and the Services, the choices you make, and the products and features you use.</p>
 							<h3>Do we process any sensitive personal information?</h3>
-                            <p>Some information may be considered “special” or “sensitive” under certain laws (for example, information about racial or ethnic origin, sexual orientation, or religious beliefs). We do not knowingly process sensitive personal information.</p>
+                            <p>Some information may be considered &quot;special&quot; or &quot;sensitive&quot; under certain laws (for example, information about racial or ethnic origin, sexual orientation, or religious beliefs). We do not knowingly process sensitive personal information.</p>
                             <h3>Do we collect information from third parties?</h3>
                             <p>We do not currently collect personal information about you from third parties for the purposes described in this Notice.</p>
                             <h3>How do we process your information?</h3>
@@ -84,16 +84,16 @@ export default function PrivacyPolicy() {
                                 <li>Location Data. Approximate location information derived from your IP address or device settings. You may be able to control collection of precise location data at the device or browser level. If you disable location permissions, some features of the Services may not function as intended.</li>
 							</ul>
                             <h2>2. How do we process your information?</h2>
-                            <p>We process your information to operate and improve Activ's Services, communicate with you, maintain security, and comply with law.</p>
+                            <p>We process your information to operate and improve Activ&apos;s Services, communicate with you, maintain security, and comply with law.</p>
                             <p>We process your personal information for a variety of reasons, depending on how you interact with our Services, including:</p>
                             <ul className={styles.anchorLinks}>
 								<li>To provide and deliver the Services. For example, to create and manage accounts, provide platform access, deliver content, and respond to requests.</li>
-                                <li>To improve and develop our Services. For example, to analyze how users interact with dashboards, features, and reports so we can refine Activ's media and news intelligence products.</li>
+                                <li>To improve and develop our Services. For example, to analyze how users interact with dashboards, features, and reports so we can refine Activ&apos;s media and news intelligence products.</li>
                                 <li>To communicate with you. For example, to send administrative information (such as updates, security alerts, or changes to our terms), respond to inquiries, and provide support.</li>
                                 <li>To send marketing and promotional communications (where permitted). For example, to share updates about new features, case studies, events, or relevant content. You can opt out of marketing at any time.</li>
                                 <li>For security, fraud prevention, and abuse detection. For example, to monitor for suspicious activity, protect accounts, and maintain the integrity of our systems.</li>
                                 <li>To comply with legal obligations. For example, to respond to lawful requests from public authorities, comply with record-keeping obligations, or enforce our terms and policies.</li>
-                                <li>To protect vital interests. We may process information where necessary to protect an individual's vital interests, such as preventing harm.</li>
+                                <li>To protect vital interests. We may process information where necessary to protect an individual&apos;s vital interests, such as preventing harm.</li>
                             </ul>
                             <p>We may also process your information for other purposes, with your consent, where applicable law requires it.</p>
                             <h2>3. What legal bases do we rely on to process your information?</h2>
@@ -163,7 +163,7 @@ export default function PrivacyPolicy() {
                             <h2>9. Do we collect information from minors?</h2>
                             <p>We do not knowingly collect data from or market to children under 18.</p>
                             <p>Our Services are intended for business and professional use. We do not knowingly collect, solicit data from, or market to children under 18 years of age, nor do we knowingly sell such personal information.</p>
-                            <p>By using the Services, you represent that you are at least 18 years old, or that you are the parent or guardian of a minor and consent to the minor's use of the Services.</p>
+                            <p>By using the Services, you represent that you are at least 18 years old, or that you are the parent or guardian of a minor and consent to the minor&apos;s use of the Services.</p>
                             <p>If we become aware that we have collected personal information from a user under 18, we will take reasonable steps to delete such data. If you believe we may have collected information from a child under 18, please contact us at [privacy@activ.africa].</p>
                             <h2>10. What are your privacy rights?</h2>
                             <p>Depending on where you live, you may have rights over your personal information.</p>
