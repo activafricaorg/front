@@ -7,6 +7,7 @@ const Waitlist = ({ open = false, onClose }) => {
   const [jobTitle, setJobTitle] = useState('');
   const [organization, setOrganization] = useState('');
   const [country, setCountry] = useState('');
+  const [agreedToPrivacy, setAgreedToPrivacy] = useState(false);
   const [status, setStatus] = useState('idle'); // idle | loading | success | duplicate | error
   const [buttonText, setButtonText] = useState('Submit');
   const [selectActive, setSelectActive] = useState(false);
@@ -31,6 +32,7 @@ const Waitlist = ({ open = false, onClose }) => {
         setJobTitle('');
         setOrganization('');
         setCountry('');
+        setAgreedToPrivacy(false);
 
         // Always show "Welcome onboard" after successful or duplicate subscription
         setButtonText('Thanks for joining');
@@ -103,6 +105,17 @@ const Waitlist = ({ open = false, onClose }) => {
                 </option>
               ))}
             </select>
+            <div className="privacy-checkbox">
+              <label>
+                <input
+                  type="checkbox"
+                  checked={agreedToPrivacy}
+                  onChange={(e) => setAgreedToPrivacy(e.target.checked)}
+                  required
+                />
+                <span>I agree to the processing of my personal data and the <a href="/privacy-policy" target="_blank" rel="noopener noreferrer">Privacy Policy</a></span>
+              </label>
+            </div>
             <div className='action-item'>
               <button
                 type="submit"

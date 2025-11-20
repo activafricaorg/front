@@ -1,6 +1,7 @@
 import { allianceSansSerif, suisseSansSerif } from "@/fonts";
 import "@/styles/globals.css";
 import Header from "@/component/layout/header";
+import Footer from "@/component/layout/footer";
 
 export const metadata = {
 	metadataBase: 'https://activ.africa',
@@ -31,6 +32,7 @@ export default function RootLayout({ children }) {
 			<body className={`${allianceSansSerif.variable} ${suisseSansSerif.variable}`}>
 				<Header />
 				{children}
+				<Footer />
 			</body>
 		</html>
 	);

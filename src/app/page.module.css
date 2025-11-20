@@ -6,24 +6,83 @@
 	--button-primary-hover: #383838;
 	--button-secondary-hover: #f2f2f2;
 	background-color: #0000;
+    min-height: calc(100vh - 80px);
 }
 
-.page h1 {
-	margin: 0 0 40px;
+.page h1, .page h2, .page h3, .page h4 {
 	font-size: 3.6em;
 	font-family: var(--font-sans), Arial, Helvetica, sans-serif;
 	letter-spacing: -1.15px;
-	line-height: 110%;
 	font-weight: 700;
 }
 
-.page p {
+.page h1 {
+	font-size: 3.6em;
+	line-height: 110%;
+	margin: 0 0 40px;
+}
+
+.page h2 {
+	font-size: 2.4em;
+	line-height: 120%;
+	margin: 2.5rem 0 1.5rem;
+}
+
+.page h3 {
+	font-size: 1.6em;
+	line-height: 120%;
+	margin: 2.5rem 0 1.15rem;
+}
+
+.anchorLinks {
+	list-style: none;
+}
+
+.anchorLinks li {
+	position: relative;
+	padding-left: 1.2rem;
+	margin-bottom: 0.5rem;
+}
+
+.anchorLinks li a {
+	color: var(--color-link);
+	text-underline-offset: .28rem;
+	text-decoration-thickness: .05rem;
+	text-decoration: underline;
+}
+
+.anchorLinks li:before {
+	height: 1.18rem;
+	width: 1.11rem;
+	left: -.28rem;
+	top: .2rem;
+	background-image: url("data:image/svg+xml;charset=utf-8,%3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' viewBox='0 0 16 17'%3E%3Cpath fill='%232E2522' d='M5 6h6v6H5z'/%3E%3C/svg%3E");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	content: "";
+	display: block;
+	position: absolute;
+}
+
+/* .anchorLinks li {
+	letter-spacing: -.015em;
+    font-size: 1.35em;
+    line-height: 1.3em;
+    font-family: var(--font-sans-serif), Arial, Helvetica, sans-serif;
+    opacity: .9;
+    margin-bottom: 30px;
+} */
+
+.page p,
+.page ul {
 	font-size: 1.35em;
 	line-height: 1.3em;
 	letter-spacing: -.015em;
 	font-family: var(--font-sans-serif), Arial, Helvetica, sans-serif;
 	opacity: 0.9;
-	margin-bottom: 30px;
+	margin-bottom: 20px;
+	position: relative;
+	z-index: -1;
 }
 
 .backgroundContainer {
@@ -54,17 +113,22 @@
 		margin-bottom: 20px;
 	}
 
-	.page p {
-		font-size: 1.3em;
+	.page h2 {
+		font-size: 1.8em;
+		margin-bottom: 20px;
+	}
+
+	.page h3 {
+		font-size: 1.4em;
+		margin-bottom: 15px;
+	}
+
+	.page p,
+	.page ul {
+		font-size: 1.25em;
 		line-height: 1.25em;
 		letter-spacing: -.031em;
 		font-family: var(--font-sans-serif), Arial, Helvetica, sans-serif;
 		opacity: 0.9;
 	}
 }
-
-/*@media (prefers-color-scheme: dark) {*/
-/*  .logo {*/
-/*    filter: invert();*/
-/*  }*/
-/*}*/

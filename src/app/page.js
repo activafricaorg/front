@@ -28,8 +28,11 @@ export default function Home() {
 		const onPause = () => { if (!document.hidden) tryPlay(); };
 		v.addEventListener('pause', onPause);
 
+		document.body.classList.add("home");
+
 		return () => {
-		document.removeEventListener('visibilitychange', onVisibility);
+			document.body.classList.remove("home");
+			document.removeEventListener('visibilitychange', onVisibility);
 			v.removeEventListener('pause', onPause);
 		};
 	}, []);
