@@ -6,7 +6,7 @@
 	--button-primary-hover: #383838;
 	--button-secondary-hover: #f2f2f2;
 	background-color: #0000;
-    min-height: calc(100vh - 80px);
+    min-height: calc(100vh - 160px);
 }
 
 .page h1, .page h2, .page h3, .page h4 {
@@ -34,21 +34,26 @@
 	margin: 2.5rem 0 1.15rem;
 }
 
-.anchorLinks {
+.anchorLinks,
+.footerLinks {
 	list-style: none;
 }
 
-.anchorLinks li {
+.anchorLinks li,
+.footerLinks li {
 	position: relative;
 	padding-left: 1.2rem;
 	margin-bottom: 0.5rem;
 }
 
-.anchorLinks li a {
-	color: var(--color-link);
+.anchorLinks li a,
+.footerLinks li a {
 	text-underline-offset: .28rem;
 	text-decoration-thickness: .05rem;
-	text-decoration: underline;
+}
+
+.anchorLinks li a {
+	color: var(--color-link);
 }
 
 .anchorLinks li:before {
@@ -64,15 +69,6 @@
 	position: absolute;
 }
 
-/* .anchorLinks li {
-	letter-spacing: -.015em;
-    font-size: 1.35em;
-    line-height: 1.3em;
-    font-family: var(--font-sans-serif), Arial, Helvetica, sans-serif;
-    opacity: .9;
-    margin-bottom: 30px;
-} */
-
 .page p,
 .page ul {
 	font-size: 1.35em;
@@ -82,7 +78,6 @@
 	opacity: 0.9;
 	margin-bottom: 20px;
 	position: relative;
-	z-index: -1;
 }
 
 .backgroundContainer {

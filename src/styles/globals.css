@@ -6,7 +6,7 @@
 	--max-width: 1728px;
 	--h-spacing: 1.6666666667rem;
 	--v-spacing: 1.6666666667rem;
-	--v-spacing-max: 12.6666666667rem;
+	--v-spacing-max: 6.6666666667rem;
 	--color-link: #0d48c7;
 }
 
@@ -20,7 +20,6 @@
 html,
 body {
 	max-width: 100vw;
-	overflow-x: hidden;
 }
 
 body {
@@ -49,8 +48,9 @@ a {
 
 header {
     width: 100%;
-	position: relative;
-	position: fixed;
+	position: sticky;
+    top: 0;
+    z-index: 1002;
 	background-color: var(--background);
 }
 
@@ -391,7 +391,7 @@ header .form-button svg {
 
 @media only screen and (max-width: 740px) {
 	:root {
-		--v-spacing-max: 10.6666666667rem;
+		--v-spacing-max: 4.6666666667rem;
 	}
 
 	.container {

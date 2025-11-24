@@ -6,7 +6,7 @@ const Footer = () => {
         <footer className="footer">
             <div className="container">
                 <div className="footer-container">
-                    <ul className={styles.anchorLinks}>
+                    <ul className={styles.footerLinks}>
                         <li><Link href="/privacy-policy">Privacy</Link></li>
                         <li><Link href="/cookie-policy">Cookies</Link></li>
                     </ul>
