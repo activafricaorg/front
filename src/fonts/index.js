@@ -1,28 +1,20 @@
 import localFont from 'next/font/local';
+import { IBM_Plex_Serif, IBM_Plex_Mono } from 'next/font/google';
 
-export const allianceSansSerif = localFont({
-	src: [
-		{
-			path: './Alliance_No_1.woff2',
-			weight: '400',
-			style: 'normal',
-		}
-	],
-	variable: "--font-sans",
-	display: "auto",
+export const ibmPlexSerif = IBM_Plex_Serif({
+	subsets: ['latin'],
+	weight: ['400', '500', '600', '700'],
+	style: ['normal', 'italic'],
+	variable: '--font-serif',
+	display: 'swap',
 });
 
-// export const microsoftSansSerif = localFont({
-// 	src: [
-// 		{
-// 			path: './Microsoft_Sans_Serif.woff2',
-// 			weight: '400',
-// 			style: 'normal',
-// 		}
-// 	],
-// 	variable: "--font-sans-serif",
-// 	display: "auto",
-// });
+export const ibmPlexMono = IBM_Plex_Mono({
+	subsets: ['latin'],
+	weight: ['400', '500', '600'],
+	variable: '--font-mono',
+	display: 'swap',
+});
 
 export const suisseSansSerif = localFont({
 	src: [

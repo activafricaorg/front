@@ -1,11 +1,14 @@
-import { allianceSansSerif, suisseSansSerif } from "@/fonts";
+import { ibmPlexSerif, ibmPlexMono, suisseSansSerif } from "@/fonts";
 import "@/styles/globals.css";
 import Header from "@/component/layout/header";
 import Footer from "@/component/layout/footer";
 
 export const metadata = {
 	metadataBase: 'https://activ.africa',
-	title: "Activ Media Intelligence",
+	title: "Activ",
+	icons: {
+		icon: '/images/v.png',
+	},
 	description: "Uncover Media Insights Across Africa's Digital Landscape",
 	openGraph: {
 		title: "Activ Media Intelligence",
@@ -29,9 +32,9 @@ export const metadata = {
 export default function RootLayout({ children }) {
 	return (
 		<html lang="en">
-			<body className={`${allianceSansSerif.variable} ${suisseSansSerif.variable}`}>
+			<body className={`${ibmPlexSerif.variable} ${ibmPlexMono.variable} ${suisseSansSerif.variable}`}>
 				<Header />
-				{children}
+					{children}
 				<Footer />
 			</body>
 		</html>

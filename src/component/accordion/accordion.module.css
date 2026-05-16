@@ -13,10 +13,6 @@
 	transition: background-color 0.2s ease;
 }
 
-/* .accordionItem:hover {
-	background-color: #f0eeee;
-} */
-
 .accordionHeader {
 	display: flex;
 	justify-content: space-between;

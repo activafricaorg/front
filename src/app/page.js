@@ -3,7 +3,14 @@
 import styles from "./page.module.css";
 import Link from "next/link";
 import Accordion from "@/component/accordion/accordion";
-import { useEffect, useState } from "react";
+import { useEffect, useState, useRef } from "react";
+
+const searchQueries = [
+	"Show me mentions of MTN in Nigeria",
+	"What's the sentiment around our campaign?",
+	"Track competitor share of voice in Kenya",
+	"Alert me about crisis mentions in real-time"
+];
 
 const faqItems = [
 	{
@@ -27,6 +34,63 @@ const faqItems = [
 		answer: "Absolutely! We offer a free trial that gives you full access to all platform features. You can monitor your brand, explore our analytics, and experience the platform's capabilities before committing to a subscription."
 	}
 ];
+
+function AnimatedSearchForm() {
+	const [displayText, setDisplayText] = useState("");
+	const [queryIndex, setQueryIndex] = useState(0);
+	const [isTyping, setIsTyping] = useState(true);
+	const charIndexRef = useRef(0);
+
+	useEffect(() => {
+		const currentQuery = searchQueries[queryIndex];
+		let timeout;
+
+		if (isTyping) {
+			if (charIndexRef.current < currentQuery.length) {
+				timeout = setTimeout(() => {
+					setDisplayText(currentQuery.slice(0, charIndexRef.current + 1));
+					charIndexRef.current += 1;
+				}, 80);
+			} else {
+				timeout = setTimeout(() => {
+					setIsTyping(false);
+				}, 1500);
+			}
+		} else {
+			if (charIndexRef.current > 0) {
+				timeout = setTimeout(() => {
+					charIndexRef.current -= 1;
+					setDisplayText(currentQuery.slice(0, charIndexRef.current));
+				}, 40);
+			} else {
+				timeout = setTimeout(() => {
+					setQueryIndex((prev) => (prev + 1) % searchQueries.length);
+					setIsTyping(true);
+				}, 300);
+			}
+		}
+
+		return () => clearTimeout(timeout);
+	}, [displayText, isTyping, queryIndex]);
+
+	return (
+		<div className={styles.animatedSearch}>
+			<div className={styles.searchIcon}>
+				<svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+					<circle cx="11" cy="11" r="8" />
+					<path d="m21 21-4.3-4.3" />
+				</svg>
+			</div>
+			<span className={styles.searchText}>{displayText}</span>
+			<span className={styles.cursor}>|</span>
+			<div className={styles.searchCTA}>
+				<svg width="18" height="18" viewBox="0 0 24 24" fill="none" aria-hidden="true">
+					<path d="M5 12h14M13 6l6 6-6 6" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/>
+				</svg>
+			</div>
+		</div>
+	);
+}
 
 export default function Home() {
 	useEffect(() => {
@@ -62,22 +126,22 @@ export default function Home() {
 
 	return (
 		<div className={styles.page}>
-			<div className={styles.hero}>
+			<div className={`${styles.hero} jumbotron`}>
 				<div className="bg-video">
 					<div className="video w-embed w-script">
 					<div className="video-wrap" aria-hidden="true">
-						<video
-						id="bgvid"
-						autoPlay
-						muted
-						playsInline
-						loop
-						preload="metadata"
-						className="bg-video"
-						disablePictureInPicture
-						controlsList="nodownload noplaybackrate nofullscreen"
+						<video	
+							id="bgvid"
+							autoPlay
+							muted
+							playsInline
+							loop
+							preload="metadata"
+							className="bg-video"
+							disablePictureInPicture
+							controlsList="nodownload noplaybackrate nofullscreen"
 						>
-						<source src="/videos/default.mp4" type="video/mp4" />
+							<source src="/videos/default.mp4" type="video/mp4" />
 						</video>
 					</div>
 
@@ -92,17 +156,15 @@ export default function Home() {
 				<div className="container">
 					<div className="main">
 						<div className="cta">
-							<h1>Real-time PR & Media Intelligence for Africa</h1>
+							<h1><span>Real-time</span> PR & Media Intelligence for Africa</h1>
 							<div className="cta-content">
 								<p>Monitor brand mentions, spot crises early, and prove campaign impact across Africa.</p>
 								<div className="action-item">
-									<Link href="https://activafrica.notion.site/2939dee2da81807690cbd2129e0c5318" target="_blank" className="form-button">
+									<Link href={`${process.env.NEXT_PUBLIC_PLATFORM_URL}/signup`} target="_blank" className="form-button">
 										Get Activ free
 									</Link>
-									<Link href="https://activafrica.notion.site/2939dee2da81807690cbd2129e0c5318" target="_blank" className="form-button secondary">
-										Book a Demo
-									</Link>
 								</div>
+								<AnimatedSearchForm />
 							</div>
 						</div>
 					</div>
@@ -113,38 +175,40 @@ export default function Home() {
 					<div className={styles.productFeatures}>
 						<div className={styles.collectionHeadingWrapper}>
 							<div className={styles.collectionHeading}>
-								<h2>One platform, four critical PR capabilities</h2>
-								<p>Track every mention, stop risks early, own your narrative, and prove your PR impact - all in one powerful platform.</p>
+								<h2><span>One</span> platform, <span>four</span> critical PR capabilities</h2>
+								<p className={styles.collectionSummary}>Track every mention, stop risks early, own your narrative, and prove your PR impact - all in one powerful platform.</p>
 								<div className="action-item">
-									<Link href="https://activafrica.notion.site/2939dee2da81807690cbd2129e0c5318" target="_blank" className="form-button">
-										Book a Demo
+									<Link href={`${process.env.NEXT_PUBLIC_PLATFORM_URL}/signup`} className="form-button">
+										Get Activ free
 									</Link>
 								</div>
 							</div>
 						</div>
 						<div className={styles.collectionItems}>
 							<div className={styles.collectionItem}>
+								<div className={styles.collectionItemHeader}>
+									<h3><span>Monitor</span> investment performance</h3>
+									<p className={styles.collectionSummary}>From 401(k)s to crypto, track the latest activity across your entire portfolio and compare performance to major indices.</p>
+								</div>
 							</div>
 							<div className={styles.collectionItem}>
+								<div className={styles.collectionItemHeader}>
+									<h3><span>Visualize</span> your entire allocation</h3>
+									<p className={styles.collectionSummary}>Know where your money is and whether it matches your goals with a personalized risk profile.</p>
+								</div>
 							</div>
 							<div className={styles.collectionItem}>
+								<div className={styles.collectionItemHeader}>
+									<h3><span>Dive</span> into any position</h3>
+									<p className={styles.collectionSummary}>From individual stocks to ETFs, get real-time performance, key financials, and personalized insights for every holding.</p>
+								</div>
 							</div>
 							<div className={styles.collectionItem}>
+								<div className={styles.collectionItemHeader}>
+									<h3><span>Track</span> what’s next</h3>
+									<p className={styles.collectionSummary}>Explore the market, add assets to your watchlist, and stay ahead with news and AI insights.</p>
+								</div>
 							</div>
-						</div>
-					</div>
-				</div>
-			</div>
-			<div className={styles.enterprise}>
-				<div className="container">
-					<div className={styles.enterpriseGrid}>
-						<div className={styles.enterpriseItem1}>
-						</div>
-						<div className={styles.enterpriseItem2}>
-						</div>
-						<div className={styles.enterpriseItem3}>
-						</div>
-						<div className={styles.enterpriseItem4}>
 						</div>
 					</div>
 				</div>

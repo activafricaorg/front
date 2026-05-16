@@ -14,29 +14,29 @@ const Footer = () => {
                         <div className="footer-column">
                             <h4>Product</h4>
                             <ul>
-                                <li><Link href="/about">Overview</Link></li>
-                                <li><Link href="/careers">Brand Monitoring</Link></li>
-                                <li><Link href="/contact">Crisis Management</Link></li>
-                                <li><Link href="/contact">Campaign Monitoring</Link></li>
-                                <li><Link href="/contact">Publisher Intelligence</Link></li>
+                                <li><Link href="/product">Overview</Link></li>
+                                <li><Link href="/product/brand-monitoring">Brand Monitoring</Link></li>
+                                <li><Link href="/product/crises-management">Crisis Management</Link></li>
+                                <li><Link href="/product/campaign-monitoring">Campaign Monitoring</Link></li>
+                                <li><Link href="/product/publisher-intelligence">Publisher Intelligence</Link></li>
                             </ul>
                         </div>
                         <div className="footer-column">
                             <h4>Company</h4>
                             <ul>
-                                <li><Link href="/features">About</Link></li>
-                                <li><Link href="/features">Pricing</Link></li>
-                                <li><Link href="/pricing">Contact us</Link></li>
-                                <li><Link href="/integrations">Linkedin</Link></li>
-                                <li><Link href="/contact">X</Link></li>
+                                <li><Link href="/about">About</Link></li>
+                                <li><Link href="/pricing">Pricing</Link></li>
+                                <li><Link href="/contact">Contact us</Link></li>
+                                <li><Link href="https://www.linkedin.com/company/activ-intelligence/" target="_blank">Linkedin</Link></li>
+                                <li><Link href="https://x.com/ActivAfrica" target="_blank">X</Link></li>
                             </ul>
                         </div>
                         <div className="footer-column">
                             <h4>Legal</h4>
                             <ul>
-                                <li><Link href="/features">Terms</Link></li>
-                                <li><Link href="/pricing">Privacy Policy</Link></li>
-                                <li><Link href="/integrations">Cookie Policy</Link></li>
+                                <li><Link href="/terms-of-use">Terms</Link></li>
+                                <li><Link href="/privacy-policy">Privacy Policy</Link></li>
+                                <li><Link href="/cookie-policy">Cookie Policy</Link></li>
                             </ul>
                         </div>
                     </div>
